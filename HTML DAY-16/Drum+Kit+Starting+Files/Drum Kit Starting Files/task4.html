@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Theme</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    button {
+      background-color: #555;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #777;
+    }
+
+    .box {
+      margin-top: 20px;
+      font-size: 3rem;
+    }
+
+   
+    .light-mode {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body id="page">
+
+  <button onclick="toggleTheme()">Toggle</button>
+
+  <div class="box">color is change</div>
+
+  <script>
+    function toggleTheme() {
+      const page = document.getElementById('page');
+      page.classList.toggle('light-mode');
+    }
+  </script>
+
+</body>
+</html>
